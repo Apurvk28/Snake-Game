@@ -127,13 +127,10 @@ function drawSnake() {
             ctx.globalAlpha = 1 - (index / snake.length) * 0.6;
         }
 
-        // Draw text instead of rectangle
-        let kaustubhSize = 12 + (snake.length - 3) * 1.5;
-        ctx.font = `bold ${kaustubhSize}px Orbitron, sans-serif`;
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText("Kaustubh", segment.x * GRID_SIZE + GRID_SIZE / 2, segment.y * GRID_SIZE + GRID_SIZE / 2);
-
+        // Draw rounded rectangle for glowing effect
+        ctx.beginPath();
+        ctx.roundRect(segment.x * GRID_SIZE + 2, segment.y * GRID_SIZE + 2, GRID_SIZE - 4, GRID_SIZE - 4, 4);
+        ctx.fill();
         ctx.globalAlpha = 1.0;
         ctx.shadowBlur = 0;
     });
@@ -146,12 +143,15 @@ function drawFood() {
     ctx.shadowBlur = 10 + pulse * 15;
     ctx.shadowColor = NEON_RED;
 
-    let kirtiSize = 14 + pulse * 4;
-    ctx.font = `bold ${kirtiSize}px Orbitron, sans-serif`;
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText("Kirti", food.x * GRID_SIZE + GRID_SIZE / 2, food.y * GRID_SIZE + GRID_SIZE / 2);
-
+    ctx.beginPath();
+    ctx.arc(
+        food.x * GRID_SIZE + GRID_SIZE / 2,
+        food.y * GRID_SIZE + GRID_SIZE / 2,
+        GRID_SIZE / 2 - 2 + pulse * 2,
+        0,
+        Math.PI * 2
+    );
+    ctx.fill();
     ctx.shadowBlur = 0;
 }
 
