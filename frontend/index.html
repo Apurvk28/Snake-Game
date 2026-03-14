@@ -27,20 +27,27 @@
             </div>
         </header>
 
-        <main class="canvas-container">
-            <canvas id="game-canvas" width="600" height="400"></canvas>
+        <div class="main-content">
+            <main class="canvas-container">
+                <canvas id="game-canvas" width="600" height="400"></canvas>
 
-            <div id="start-screen" class="overlay">
-                <h2>READY?</h2>
-                <button id="start-btn" class="glow-btn">PLAY NOW</button>
-            </div>
+                <div id="start-screen" class="overlay">
+                    <h2>READY?</h2>
+                    <button id="start-btn" class="glow-btn">PLAY NOW</button>
+                </div>
 
-            <div id="game-over-screen" class="overlay hidden">
-                <h2>SYSTEM FAILURE</h2>
-                <p>FINAL SCORE: <span id="final-score">0</span></p>
-                <button id="restart-btn" class="glow-btn">REBOOT SYSTEM</button>
-            </div>
-        </main>
+                <div id="game-over-screen" class="overlay hidden">
+                    <h2>SYSTEM FAILURE</h2>
+                    <p>FINAL SCORE: <span id="final-score">0</span></p>
+                    <button id="restart-btn" class="glow-btn">REBOOT SYSTEM</button>
+                </div>
+            </main>
+
+            <aside class="leaderboard-container">
+                <h2>🏆 TOP SCORES 🏆</h2>
+                <ul id="leaderboard-list"></ul>
+            </aside>
+        </div>
 
         <div class="controls-hint">
             <p>Use ARROW KEYS or WASD to navigate.</p>

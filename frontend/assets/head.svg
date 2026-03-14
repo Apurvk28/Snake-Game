@@ -1,0 +1,15 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glowing effect behind -->
+  <rect x="10" y="10" width="80" height="80" rx="30" fill="#00ffaa" filter="blur(4px)" opacity="0.6"/>
+  <!-- Main Head -->
+  <rect x="10" y="10" width="80" height="80" rx="30" fill="#00ffaa"/>
+  <!-- Eyes -->
+  <circle cx="30" cy="30" r="12" fill="white"/>
+  <circle cx="70" cy="30" r="12" fill="white"/>
+  <!-- Pupils -->
+  <circle cx="30" cy="27" r="5" fill="black"/>
+  <circle cx="70" cy="27" r="5" fill="black"/>
+  <!-- Mouth / tech lines -->
+  <path d="M 30 70 L 70 70" stroke="#005533" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 50 10 L 50 20" stroke="#005533" stroke-width="4" stroke-linecap="round"/>
+</svg>

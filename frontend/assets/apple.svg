@@ -1,0 +1,10 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glow -->
+  <circle cx="50" cy="55" r="40" fill="#ff0055" filter="blur(8px)" opacity="0.6"/>
+  <!-- Apple Body -->
+  <circle cx="50" cy="55" r="35" fill="#ff0055"/>
+  <circle cx="40" cy="45" r="10" fill="#ff88aa" opacity="0.6"/> <!-- highlight -->
+  <!-- Stem & Leaf -->
+  <path d="M 50 20 Q 55 10 65 5 Q 50 0 50 20" fill="#00ffaa"/>
+  <path d="M 50 20 L 50 30" stroke="#884400" stroke-width="4"/>
+</svg>
